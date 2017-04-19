@@ -1,4 +1,4 @@
-#/usr/bin/env ruby
+#!/usr/bin/env ruby
 
 sets = [
   [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89],
