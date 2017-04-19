@@ -1,9 +1,14 @@
 #!/usr/bin/env ruby
 
-sets = [
-  [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89],
-  [1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
-]
+number_of_sets    = 2
+elements_per_set  = 20
+elemental_range   = 1..100
+
+sets = number_of_sets.times.collect do
+  elements_per_set.times.collect do
+    rand elemental_range
+  end
+end
 
 intersection = sets.inject :&  # Apply the & opperator bewteen all sets
 unique_intersection = intersection.uniq
